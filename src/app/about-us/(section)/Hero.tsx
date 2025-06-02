@@ -17,7 +17,7 @@ const Hero = ({}) => {
                 At Chilli`s, every dish is a celebration of vibrant flavours and
                 bold traditions. From the finest ingredients to time-honoured
                 recipes, we offer you an unforgettable dining experience
-                inspired by the heart of global cuisine. Whether you're enjoying
+                inspired by the heart of global cuisine. Whether you`re enjoying
                 sizzling fajitas, delighting in aromatic spices, or treating
                 yourself to a delicious dessert, each bite tells a story of
                 authenticity, passion, and culinary craftsmanship.
