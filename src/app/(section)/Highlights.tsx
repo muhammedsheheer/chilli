@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const menuItems = [
   {
@@ -32,7 +33,11 @@ const Highlights: React.FC = () => {
   return (
     <section className="relative h-full w-full bg-[#C93732] px-4 pb-12 pt-12 md:px-0 md:pb-40 md:pt-20">
       <div className="absolute bottom-6 left-[30%] hidden md:block">
-        <Image
+        <motion.img
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           src={"/images/home/highlights/image.png"}
           width={281}
           height={74}
@@ -46,14 +51,24 @@ const Highlights: React.FC = () => {
         </h1>
         <div className="flex flex-col justify-center gap-4 md:flex-row md:justify-between">
           <div className="md:ml-28 md:w-1/2">
-            <h1 className="font-playfair text-2xl font-[400] uppercase text-[#FFFDF1] md:text-6xl">
+            <motion.h1
+              className="font-playfair text-2xl font-[400] uppercase text-[#FFFDF1] md:text-6xl"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
               we offer <br />
               Unforgettable <br />
               Dining <br /> Experience
-            </h1>
+            </motion.h1>
           </div>
           <div className="md:hidden">
-            <Image
+            <motion.img
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
               src={"/images/home/highlights/image.png"}
               width={281}
               height={74}

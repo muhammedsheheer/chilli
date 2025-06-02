@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   return (
@@ -18,14 +19,24 @@ const About: React.FC = () => {
       </h1>
       <div className="relative z-50 flex flex-col gap-8 md:flex-row">
         <div className="flex w-full flex-col gap-4 md:w-[30%]">
-          <Image
+          <motion.img
             src={"/images/home/about/left.png"}
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             width={281}
             height={74}
             alt="left"
             className="h-auto w-full"
           />
-          <div className="flex flex-col gap-3 pl-8">
+          <motion.div
+            className="flex flex-col gap-3 pl-8"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <span className="font-poppins text-base font-[300] uppercase tracking-[4px] text-[#fec679]">
               About Us
             </span>
@@ -45,11 +56,15 @@ const About: React.FC = () => {
                 </Button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="w-full md:w-[40%]">
-          <Image
+          <motion.img
             src={"/images/home/about/image.png"}
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             width={281}
             height={74}
             alt="left"
@@ -57,14 +72,24 @@ const About: React.FC = () => {
           />
         </div>
         <div className="flex w-full flex-col gap-4 md:w-[30%]">
-          <Image
+          <motion.img
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src={"/images/home/about/right.png"}
             width={281}
             height={74}
             alt="left"
             className="h-auto w-full"
           />
-          <div className="flex flex-col pl-8">
+          <motion.div
+            className="flex flex-col pl-8"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <p className="w-full max-w-[330px] font-inter text-sm font-[300] tracking-[1px] text-[#fff]">
               Where else in St Albans can you find delicious food , great value
               for money, a fantastic atmosphere and let’s not forget the
@@ -74,7 +99,7 @@ const About: React.FC = () => {
               We Chill@chilli’s team, proudly announce our newly opened
               restaurant and promise not to disappoint.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

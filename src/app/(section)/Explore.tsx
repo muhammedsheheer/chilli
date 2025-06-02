@@ -3,17 +3,28 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Explore = () => {
   return (
     <section className="h-full w-full bg-[#101010] px-4 py-12 md:px-20 md:py-24 2xl:px-36">
-      <h1 className="pb-6 text-center font-playfair text-4xl font-[400] uppercase leading-[92%] text-[#fff] md:pb-24 md:text-7xl">
+      <motion.h1
+        className="pb-6 text-center font-playfair text-4xl font-[400] uppercase leading-[92%] text-[#fff] md:pb-24 md:text-7xl"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
         EXPLORE
         <span className="text-[#C93732]"> OUR MENU</span>
-      </h1>
+      </motion.h1>
       <div className="flex flex-col items-start justify-center gap-6 md:flex-row md:gap-14">
         <div className="w-full md:mt-[12%] md:w-[33%]">
-          <Image
+          <motion.img
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src={"/images/home/explore/image1.png"}
             width={281}
             height={74}
@@ -22,7 +33,11 @@ const Explore = () => {
           />
         </div>
         <div className="flex w-full flex-col gap-4 md:w-[33%]">
-          <Image
+          <motion.img
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src={"/images/home/explore/image3.png"}
             width={281}
             height={74}
@@ -47,7 +62,11 @@ const Explore = () => {
           </div>
         </div>
         <div className="w-full md:w-[33%]">
-          <Image
+          <motion.img
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src={"/images/home/explore/image2.png"}
             width={281}
             height={74}

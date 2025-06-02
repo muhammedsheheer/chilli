@@ -8,7 +8,7 @@ const Footer = ({}) => {
     <footer className="h-full w-full bg-[#0B0B0B] px-4 pt-2 lg:px-32">
       <div className="flex flex-col gap-4 pt-12 md:gap-8 lg:pt-24">
         {/* first  div */}
-        <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:items-start md:justify-between">
+        <div className="hidden flex-col items-center justify-center gap-6 md:flex md:flex-row md:items-start md:justify-between">
           <div>
             <Link href={"/"}>
               <Image
@@ -39,6 +39,12 @@ const Footer = ({}) => {
             >
               Table booking
             </Link>
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"tel:+07780505070"}
+            >
+              07780505070
+            </Link>
           </div>
           <div className="flex flex-col items-center justify-center gap-4 md:items-start md:justify-start">
             <Link
@@ -53,6 +59,20 @@ const Footer = ({}) => {
             >
               Contact Us
             </Link>
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"mailto:info@chillatchillies.co.uk"}
+            >
+              info@chillatchillies.co.uk
+            </Link>
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"https://g.co/kgs/J2G2BQN"}
+              target="_blank"
+            >
+              Hertfordshire, 415 Hatfield Rd, <br /> St Albans AL4 0XP, United
+              Kingdom
+            </Link>
           </div>
           <div className="flex flex-col items-center justify-center gap-6 md:items-start md:justify-start md:gap-12">
             <div className="tems-center flex flex-col justify-center gap-1 md:items-start md:justify-start">
@@ -60,8 +80,9 @@ const Footer = ({}) => {
                 Working Hours
               </span>
               <span className="text-center font-playfair text-sm font-[400] text-[#fff] md:text-start">
-                MON-FRI : 5:00PM - 10:00PM <br />
-                SATURDAY: 12:00PM - 11:00PM <br />
+                MONDAY : 5:00PM - 10:00PM <br />
+                TUESDAY: CLOSED WED-FRI: 5:00PM - 10:00PM <br />
+                SATURDAY : 12:00PM- 11:00PM <br />
                 SUNDAY : 12:00PM- 10:00PM
               </span>
             </div>
@@ -69,7 +90,112 @@ const Footer = ({}) => {
               <Link href={""} target="_blank" className="text-[#fff]">
                 <Icons.instagram />
               </Link>
+              <Link
+                href={"https://g.co/kgs/J2G2BQN"}
+                target="_blank"
+                className="text-[#fff]"
+              >
+                <Icons.google />
+              </Link>
               <Link href={""} target="_blank" className="text-[#fff]">
+                <Icons.unknown />
+              </Link>
+              <Link href={""} target="_blank" className="text-[#fff]">
+                <Icons.facebook />
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* mobile screen */}
+        <div className="flex flex-col gap-6 md:hidden md:flex-row md:items-start md:justify-between">
+          <div>
+            <Link href={"/"}>
+              <Image
+                src={"/images/home/hero/logo.png"}
+                width={281}
+                height={74}
+                alt="logo"
+                className="w-36 md:w-44"
+              />
+            </Link>
+          </div>
+          <div className="flex flex-col items-start justify-start gap-4 md:items-start md:justify-start">
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"/"}
+            >
+              Home
+            </Link>
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"/menu"}
+            >
+              Menu
+            </Link>
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"/table-booking"}
+            >
+              Table booking
+            </Link>
+
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"/contact"}
+            >
+              Contact Us
+            </Link>
+          </div>
+          <div className="flex flex-col items-start justify-start gap-4 md:items-start md:justify-start">
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"/about-us"}
+            >
+              About
+            </Link>
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"tel:+07780505070"}
+            >
+              07780505070
+            </Link>
+
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"mailto:info@chillatchillies.co.uk"}
+            >
+              info@chillatchillies.co.uk
+            </Link>
+            <Link
+              className="font-playfair text-sm font-[400] text-[#fff]"
+              href={"https://g.co/kgs/J2G2BQN"}
+              target="_blank"
+            >
+              Hertfordshire, 415 Hatfield Rd, <br /> St Albans AL4 0XP, United
+              Kingdom
+            </Link>
+          </div>
+          <div className="flex flex-col items-end justify-end gap-6 md:items-start md:justify-start md:gap-12">
+            <div className="flex flex-col items-end justify-end gap-1 md:items-start md:justify-start">
+              <span className="text-end font-playfair text-base font-[400] text-[#fff] md:text-start">
+                Working Hours
+              </span>
+              <span className="text-end font-playfair text-sm font-[400] text-[#fff] md:text-start">
+                MONDAY : 5:00PM - 10:00PM <br />
+                TUESDAY: CLOSED WED-FRI: 5:00PM - 10:00PM <br />
+                SATURDAY : 12:00PM- 11:00PM <br />
+                SUNDAY : 12:00PM- 10:00PM
+              </span>
+            </div>
+            <div className="flex flex-row items-center justify-center gap-3 md:justify-start">
+              <Link href={""} target="_blank" className="text-[#fff]">
+                <Icons.instagram />
+              </Link>
+              <Link
+                href={"https://g.co/kgs/J2G2BQN"}
+                target="_blank"
+                className="text-[#fff]"
+              >
                 <Icons.google />
               </Link>
               <Link href={""} target="_blank" className="text-[#fff]">

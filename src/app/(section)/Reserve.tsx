@@ -2,12 +2,19 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Reserve: React.FC = () => {
   return (
     <section className="relative h-full w-full bg-[#c93732]">
       <div className="flex flex-col md:flex-row">
-        <div className="ml-4 flex w-full flex-col gap-4 py-20 md:ml-16 md:mt-24 md:w-1/2 md:py-0">
+        <motion.div
+          className="ml-4 flex w-full flex-col gap-4 py-20 md:ml-16 md:mt-24 md:w-1/2 md:py-0"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <h2 className="font-playfair text-4xl font-[400] uppercase text-[#FFFDF1] md:text-6xl">
             Reserve <br />
             Your Table
@@ -28,16 +35,24 @@ const Reserve: React.FC = () => {
               </Button>
             </Link>
           </div>
-        </div>
+        </motion.div>
         <div className="flex w-full flex-col md:w-1/2">
-          <Image
+          <motion.img
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src={"/images/home/reserve/image1.png"}
             width={281}
             height={74}
             alt="image"
             className="h-auto w-full object-cover md:h-full"
           />
-          <Image
+          <motion.img
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             src={"/images/home/reserve/image2.png"}
             width={281}
             height={74}
